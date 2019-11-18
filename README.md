@@ -41,4 +41,8 @@ As a keen saver,
 So that I can store my money,
 I want to be able to deposit to my account.
 
+As a user of money,
+So that I can access my money,
+I want to be able to withdraw from my account.
+
 ```

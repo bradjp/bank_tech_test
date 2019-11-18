@@ -14,4 +14,12 @@ describe Account do
     end
   end
 
+  describe '#withdraw' do
+    it 'allows money to be withdrawn from an account' do
+      account.deposit(100)
+      account.withdraw(100)
+      expect(account.balance).to eq 0
+    end
+  end
+
 end
