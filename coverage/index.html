@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-11-18T20:00:22+00:00">2019-11-18T20:00:22+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-11-18T20:16:34+00:00">2019-11-18T20:16:34+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.67
+         1.82
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>2</b> files in total.
-    <b>30</b> relevant lines. 
-    <span class="green"><b>30</b> lines covered</span> and
+    <b>41</b> relevant lines. 
+    <span class="green"><b>41</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -53,21 +53,21 @@
       <tr>
         <td class="strong"><a href="#36157f4d1af53d64fad8780333269eebcc49ebc8" class="src_link" title="lib/account.rb">lib/account.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>19</td>
-        <td>10</td>
-        <td>10</td>
+        <td>31</td>
+        <td>16</td>
+        <td>16</td>
         <td>0</td>
-        <td>2.4</td>
+        <td>2.8</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#fa40e3ebfc465eddc6a65f3f19dde012c5637326" class="src_link" title="spec/account_spec.rb">spec/account_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>33</td>
-        <td>20</td>
-        <td>20</td>
+        <td>39</td>
+        <td>25</td>
+        <td>25</td>
         <td>0</td>
-        <td>1.3</td>
+        <td>1.2</td>
       </tr>
       
     </tbody>
@@ -91,8 +91,8 @@
     <h3>lib/account.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>10</b> relevant lines. 
-      <span class="green"><b>10</b> lines covered</span> and
+      <b>16</b> relevant lines. 
+      <span class="green"><b>16</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -130,14 +130,14 @@
           <code class="ruby">  def initialize</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="6">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="6" data-linenumber="6">
+          <span class="hits">6</span>
           
           <code class="ruby">    @balance = 0</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="7">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="6" data-linenumber="7">
+          <span class="hits">6</span>
           
           <code class="ruby">    @history = []</code>
         </li>
@@ -160,16 +160,16 @@
           <code class="ruby">  def deposit(date, amount)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="11">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="5" data-linenumber="11">
+          <span class="hits">5</span>
           
           <code class="ruby">    @balance += amount</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="12">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="5" data-linenumber="12">
+          <span class="hits">5</span>
           
-          <code class="ruby">    @history.push({date: &quot;#{date}&quot;, deposit: amount, balance: @balance})</code>
+          <code class="ruby">    store_deposit(date, amount)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="13">
@@ -187,28 +187,100 @@
         <li class="covered" data-hits="1" data-linenumber="15">
           <span class="hits">1</span>
           
-          <code class="ruby">  def withdraw(amount)</code>
+          <code class="ruby">  def withdraw(date, amount)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="16">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="16">
+          <span class="hits">3</span>
           
           <code class="ruby">    @balance -= amount</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="covered" data-hits="3" data-linenumber="17">
+          <span class="hits">3</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    store_withdrawal(date, amount)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="18">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  private</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def store_deposit(date, amount)</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="23">
+          <span class="hits">5</span>
+          
+          <code class="ruby">    @history.push({date: &quot;#{date}&quot;, deposit: amount, balance: @balance})</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="26">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def store_withdrawal(date, amount)</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="27">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    @history.push({date: &quot;#{date}&quot;, withdrawal: amount, balance: @balance})</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="29">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="31">
           
           
           <code class="ruby">end</code>
@@ -224,8 +296,8 @@
     <h3>spec/account_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>20</b> relevant lines. 
-      <span class="green"><b>20</b> lines covered</span> and
+      <b>25</b> relevant lines. 
+      <span class="green"><b>25</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -257,8 +329,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="5">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="7" data-linenumber="5">
+          <span class="hits">7</span>
           
           <code class="ruby">  subject(:account) { described_class.new }</code>
         </li>
@@ -398,7 +470,7 @@
         <li class="covered" data-hits="1" data-linenumber="28">
           <span class="hits">1</span>
           
-          <code class="ruby">      account.withdraw(100)</code>
+          <code class="ruby">      account.withdraw(&#39;12/11/19&#39;, 100)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="29">
@@ -413,19 +485,55 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="31">
+        <li class="covered" data-hits="1" data-linenumber="31">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;stores a record of the withdrawal&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="32">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      account.deposit(&#39;11/11/19&#39;, 100)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="33">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      account.withdraw(&#39;12/12/19&#39;, 50)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="34">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      account.withdraw(&#39;13/12/19&#39;, 50)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="35">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(account.history).to eq [{date: &#39;11/11/19&#39;, deposit: 100, balance: 100}, {date: &#39;12/12/19&#39;, withdrawal: 50, balance: 50},  {date: &#39;13/12/19&#39;, withdrawal: 50, balance: 0}]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="36">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="37">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="32">
+        <li class="never" data-hits="" data-linenumber="38">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="33">
+        <li class="never" data-hits="" data-linenumber="39">
           
           
           <code class="ruby">end</code>

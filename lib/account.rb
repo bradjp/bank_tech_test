@@ -9,11 +9,23 @@ class Account
 
   def deposit(date, amount)
     @balance += amount
+    store_deposit(date, amount)
+  end
+
+  def withdraw(date, amount)
+    @balance -= amount
+    store_withdrawal(date, amount)
+  end
+
+  private
+
+  def store_deposit(date, amount)
     @history.push({date: "#{date}", deposit: amount, balance: @balance})
   end
 
-  def withdraw(amount)
-    @balance -= amount
+  def store_withdrawal(date, amount)
+    @history.push({date: "#{date}", withdrawal: amount, balance: @balance})
   end
+
 
 end
