@@ -26,7 +26,7 @@ Bank Tech Test
 Task
 -----
 
-A tech test to implement a bank account program that can be interacted with via IRB, to create accounts which allow deposits, withdrawals and the printing of statements. Data can be stored in memory.
+A tech test to implement a bank account program that can be interacted with via IRB, to create accounts that allow deposits, withdrawals and the printing of statements. Data can be stored in memory.
 
 User stories
 ------------
@@ -35,6 +35,10 @@ User stories
 
 As a customer of the bank,
 So that I can manage my money,
-I want to be able to create an account
+I want to be able to create an account.
+
+As a keen saver,
+So that I can store my money,
+I want to be able to deposit to my account.
 
 ```
