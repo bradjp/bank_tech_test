@@ -45,4 +45,12 @@ As a user of money,
 So that I can access my money,
 I want to be able to withdraw from my account.
 
+As a user of money,
+So that I can access my money,
+I want to be able to withdraw from my account.
+
+As a keen record-keeper,
+So that I can view my past transactions,
+I want all account activity to be stored in my account.
+
 ```
