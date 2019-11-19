@@ -12,10 +12,8 @@ describe AccountStatement do
     expect(STDOUT).to receive(:puts).with("date || credit || debit || balance\n#{date} || 100.00 ||  || 100.00")
     account_statement.display(account)
   end
-#   it 'should print a bank statement' do
-#   account = double(balance: 100, history: [{ date: date, deposit: '100.00', balance: '100.00' }])
-#   expect(account_statement.display(account)).to eq()
-# end
+  #   it 'should print a bank statement' do
+  #   account = double(balance: 100, history: [{ date: date, deposit: '100.00', balance: '100.00' }])
+  #   expect(account_statement.display(account)).to eq()
+  # end
 end
-
-

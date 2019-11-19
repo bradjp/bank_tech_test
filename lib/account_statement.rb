@@ -16,5 +16,4 @@ class AccountStatement
   def statement_body(account)
     account.history.reverse.map { |entry| "#{entry[:date]} || #{entry[:deposit]} || #{entry[:withdrawal]} || #{entry[:balance]}" }.join("\n")
   end
-
 end

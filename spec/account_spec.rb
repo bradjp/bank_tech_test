@@ -22,7 +22,7 @@ describe Account do
     it 'stores a record of the deposit' do
       account.deposit(100)
       account.deposit(100)
-      expect(account.history).to eq [{:balance=>"100.00", :date=>"11/19/2019", :deposit=>"100.00", :withdrawal=>""}, {:balance=>"200.00", :date=>"11/19/2019", :deposit=>"100.00", :withdrawal=>""}]
+      expect(account.history).to eq [{ balance: '100.00', date: '11/19/2019', deposit: '100.00', withdrawal: '' }, { balance: '200.00', date: '11/19/2019', deposit: '100.00', withdrawal: '' }]
     end
     it 'ensures a deposit is above 0' do
       account.deposit(100)
@@ -41,7 +41,7 @@ describe Account do
       account.deposit(100)
       account.withdraw(50)
       account.withdraw(50)
-      expect(account.history).to eq [{:balance=>"100.00", :date=>"11/19/2019", :deposit=>"100.00", :withdrawal=>""}, {:balance=>"50.00", :date=>"11/19/2019", :deposit=>"", :withdrawal=>"50.00"}, {:balance=>"0.00", :date=>"11/19/2019", :deposit=>"", :withdrawal=>"50.00"}]
+      expect(account.history).to eq [{ balance: '100.00', date: '11/19/2019', deposit: '100.00', withdrawal: '' }, { balance: '50.00', date: '11/19/2019', deposit: '', withdrawal: '50.00' }, { balance: '0.00', date: '11/19/2019', deposit: '', withdrawal: '50.00' }]
     end
     it 'ensures a withdrawal is above 0' do
       account.deposit(100)
