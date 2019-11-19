@@ -22,7 +22,12 @@ describe Account do
     it 'stores a record of the deposit' do
       account.deposit(100)
       account.deposit(100)
-      expect(account.history).to eq [{ date: date, deposit: 100, balance: 100 }, { date: date, deposit: 100, balance: 200 }]
+      expect(account.history).to eq [{:balance=>"100.00", :date=>"11/19/2019", :deposit=>"100.00", :withdrawal=>""}, {:balance=>"200.00", :date=>"11/19/2019", :deposit=>"100.00", :withdrawal=>""}]
+    end
+    it 'ensures a deposit is above 0' do
+      account.deposit(100)
+      account.deposit(-100)
+      expect(account.balance).to eq 100
     end
   end
 
@@ -36,7 +41,16 @@ describe Account do
       account.deposit(100)
       account.withdraw(50)
       account.withdraw(50)
-      expect(account.history).to eq [{ date: date, deposit: 100, balance: 100 }, { date: date, withdrawal: 50, balance: 50 }, { date: date, withdrawal: 50, balance: 0 }]
+      expect(account.history).to eq [{:balance=>"100.00", :date=>"11/19/2019", :deposit=>"100.00", :withdrawal=>""}, {:balance=>"50.00", :date=>"11/19/2019", :deposit=>"", :withdrawal=>"50.00"}, {:balance=>"0.00", :date=>"11/19/2019", :deposit=>"", :withdrawal=>"50.00"}]
+    end
+    it 'ensures a withdrawal is above 0' do
+      account.deposit(100)
+      account.withdraw(-100)
+      expect(account.balance).to eq 100
+    end
+    it 'alerts the account holder if a withdrawal is refused due to insufficient funds' do
+      account.deposit(100)
+      expect { account.withdraw(101) }.to raise_error(RuntimeError, 'Sorry, insufficient funds.')
     end
   end
 end
