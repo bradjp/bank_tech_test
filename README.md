@@ -41,16 +41,16 @@ As a keen saver,
 So that I can store my money,
 I want to be able to deposit to my account.
 
-As a user of money,
-So that I can access my money,
-I want to be able to withdraw from my account.
-
-As a user of money,
+As a bank customer,
 So that I can access my money,
 I want to be able to withdraw from my account.
 
 As a keen record-keeper,
 So that I can view my past transactions,
 I want all account activity to be stored in my account.
+
+As a keen record-keeper,
+So that I can view my past transactions,
+I want to be able to print a statement of my account activity.
 
 ```

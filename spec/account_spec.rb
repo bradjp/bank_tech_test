@@ -5,7 +5,7 @@ require 'account'
 describe Account do
   subject(:account) { described_class.new }
 
-  date = Date.today.strftime("%m/%d/%Y")
+  date = Date.today.strftime('%m/%d/%Y')
 
   it 'is created with a balance of 0' do
     expect(account.balance).to eq 0
