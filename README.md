@@ -61,6 +61,19 @@ So that I can view my past transactions,
 I want to be able to print a statement of my account activity.
 
 ```
+Installation
+------------
+
+Download the repository using:
+
+git clone 
+
+change directory into the banking directory then run
+
+npm install
+
+to install dependencies.
+
 Setting up
 ----------
 
