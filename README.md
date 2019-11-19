@@ -78,9 +78,18 @@ bundle install
 ```
 to install required gems.
 
-Setting up
-----------
+Using the program
+-----------------
 
+Open IRB from the command line:
+```
+irb
+```
+Require the file:
+```
+require './lib/account_statement.rb'
+```
+Account creation, deposits, withdrawals and the viewing of statements are demonstrated in the screenshots below.
 
 
 ![image](https://user-images.githubusercontent.com/47543495/69178410-6bd1b600-0b01-11ea-8462-9ec2144078cd.png)
