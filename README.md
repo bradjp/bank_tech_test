@@ -66,13 +66,17 @@ Installation
 
 Download the repository using:
 
-git clone 
+```
+git clone git@github.com:bradjp/bank_tech_test.git
+```
 
-change directory into the banking directory then run
+Change into the bank_tech_test directory using cd in your command line.
 
-npm install
-
-to install dependencies.
+Run command
+```
+bundle install
+```
+to install required gems.
 
 Setting up
 ----------
