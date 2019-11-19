@@ -61,3 +61,13 @@ So that I can view my past transactions,
 I want to be able to print a statement of my account activity.
 
 ```
+Setting up
+----------
+
+
+
+![image](https://user-images.githubusercontent.com/47543495/69178410-6bd1b600-0b01-11ea-8462-9ec2144078cd.png)
+
+![image](https://user-images.githubusercontent.com/47543495/69178271-32994600-0b01-11ea-999d-8792f826b1dc.png)
+
+
