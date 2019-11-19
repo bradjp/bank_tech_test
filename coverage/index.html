@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-11-19T15:54:41+00:00">2019-11-19T15:54:41+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-11-19T18:55:07+00:00">2019-11-19T18:55:07+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.14
+         2.07
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>4</b> files in total.
-    <b>75</b> relevant lines. 
-    <span class="green"><b>75</b> lines covered</span> and
+    <b>76</b> relevant lines. 
+    <span class="green"><b>76</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -63,11 +63,11 @@
       <tr>
         <td class="strong"><a href="#edf0796756dbc9d4705d614d72d7566ca63b63a0" class="src_link" title="lib/account_statement.rb">lib/account_statement.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>10</td>
-        <td>5</td>
-        <td>5</td>
+        <td>20</td>
+        <td>9</td>
+        <td>9</td>
         <td>0</td>
-        <td>1.8</td>
+        <td>1.1</td>
       </tr>
       
       <tr>
@@ -84,10 +84,10 @@
         <td class="strong"><a href="#b9f9787cc8cebad82dc3044a4bee30d503b59f9e" class="src_link" title="spec/account_statement_spec.rb">spec/account_statement_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>21</td>
-        <td>11</td>
-        <td>11</td>
+        <td>8</td>
+        <td>8</td>
         <td>0</td>
-        <td>1.2</td>
+        <td>1.1</td>
       </tr>
       
     </tbody>
@@ -370,8 +370,8 @@
     <h3>lib/account_statement.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>5</b> relevant lines. 
-      <span class="green"><b>5</b> lines covered</span> and
+      <b>9</b> relevant lines. 
+      <span class="green"><b>9</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -415,25 +415,85 @@
           <code class="ruby">  def display(account)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="7">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
           
-          <code class="ruby">    puts &quot;date || credit || debit || balance&quot;</code>
+          <code class="ruby">    puts statement_header + statement_body(account)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="8">
-          <span class="hits">4</span>
-          
-          <code class="ruby">    account.history.reverse.map { |entry| &quot;#{entry[:date]}&quot; + &quot; || &quot; + &quot;#{entry[:deposit]}&quot; + &quot; || &quot; + &quot;#{entry[:withdrawal]}&quot; + &quot; || &quot; + &quot;#{entry[:balance]}&quot; }.join</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="never" data-hits="" data-linenumber="8">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  private</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def statement_header</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    &quot;date || credit || debit || balance\n&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def statement_body(account)</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="17">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    account.history.reverse.map { |entry| &quot;#{entry[:date]} || #{entry[:deposit]} || #{entry[:withdrawal]} || #{entry[:balance]}&quot; }.join(&quot;\n&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
           
           
           <code class="ruby">end</code>
@@ -804,8 +864,8 @@
     <h3>spec/account_statement_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>11</b> relevant lines. 
-      <span class="green"><b>11</b> lines covered</span> and
+      <b>8</b> relevant lines. 
+      <span class="green"><b>8</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -843,8 +903,8 @@
           <code class="ruby">describe AccountStatement do</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="6">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="2" data-linenumber="6">
+          <span class="hits">2</span>
           
           <code class="ruby">  subject(:account_statement) { described_class.new }</code>
         </li>
@@ -882,7 +942,7 @@
         <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(STDOUT).to receive(:puts).with(&quot;date || credit || debit || balance&quot;)</code>
+          <code class="ruby">    expect(STDOUT).to receive(:puts).with(&quot;date || credit || debit || balance\n#{date} || 100.00 ||  || 100.00&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="13">
@@ -897,28 +957,28 @@
           <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="15">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="15">
           
-          <code class="ruby">  it &#39;should print a bank statement&#39; do</code>
+          
+          <code class="ruby">#   it &#39;should print a bank statement&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="16">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="16">
           
-          <code class="ruby">  account = double(balance: 100, history: [{ date: date, deposit: &#39;100.00&#39;, balance: &#39;100.00&#39; }])</code>
+          
+          <code class="ruby">#   account = double(balance: 100, history: [{ date: date, deposit: &#39;100.00&#39;, balance: &#39;100.00&#39; }])</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="17">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="17">
           
-          <code class="ruby">  expect(account_statement.display(account)).to eq(&quot;#{date} || 100.00 ||  || 100.00&quot;)</code>
+          
+          <code class="ruby">#   expect(account_statement.display(account)).to eq()</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="18">
           
           
-          <code class="ruby">end</code>
+          <code class="ruby"># end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="19">
