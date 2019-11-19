@@ -3,7 +3,7 @@
 require_relative 'account'
 
 class AccountStatement
-  def display(account)
+  def display_transactions(account)
     puts statement_header + statement_body(account)
   end
 
