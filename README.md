@@ -29,6 +29,10 @@ Task
 A tech test to implement a bank account program that can be interacted with via IRB, to create accounts that allow deposits, withdrawals and the printing of statements. Data can be stored in memory.
 
 Approach
+--------
+
+
+The program has been divided into an account class, which deals with servicing the account, and an account statement class, which is responsible for creating and displaying statements. 
 
 
 User stories
