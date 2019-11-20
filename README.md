@@ -89,11 +89,20 @@ Require the file:
 ```
 require './lib/account_statement.rb'
 ```
+
+Tests are run with in the command line with rspec
+
+```
+rspec
+```
+
+
 Account creation, deposits, withdrawals and the viewing of statements are demonstrated in the screenshots below.
 
 
 ![image](https://user-images.githubusercontent.com/47543495/69178410-6bd1b600-0b01-11ea-8462-9ec2144078cd.png)
 
 ![image](https://user-images.githubusercontent.com/47543495/69178271-32994600-0b01-11ea-999d-8792f826b1dc.png)
+
 
 
