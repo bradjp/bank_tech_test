@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'account'
+require 'timecop'
 
 describe Account do
   subject(:account) { described_class.new }
@@ -36,6 +37,13 @@ describe Account do
       account.deposit(100)
       account.withdraw(100)
       expect(account.balance).to eq 0
+    end
+    it 'test' do
+      account.deposit(100)
+      tomorrow = Timecop.freeze(Date.today + 1).strftime('%m/%d/%Y')
+      account.deposit(100)
+      Timecop.return
+      expect(account.history).to eq [{ balance: '100.00', date: date, deposit: '100.00', withdrawal: '' }, { balance: '200.00', date: tomorrow, deposit: '100.00', withdrawal: '' }]
     end
     it 'stores a record of the withdrawal' do
       account.deposit(100)
