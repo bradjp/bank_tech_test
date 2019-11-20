@@ -1,5 +1,6 @@
-describe 'Account management feature test' do
+# frozen_string_literal: true
 
+describe 'Account management feature test' do
   it 'creates an account and makes transactions' do
     account = Account.new
     account.deposit(100)
