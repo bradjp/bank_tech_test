@@ -90,7 +90,7 @@ Require the file:
 require './lib/account_statement.rb'
 ```
 
-Tests are run with in the command line with rspec
+Tests are run in the command line with rspec
 
 ```
 rspec
